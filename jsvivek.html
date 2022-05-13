@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title> JavaScript Demo </title>
+        <script type="text/javascript">
+            function demoInternalAlert(){
+                alert("internal alret.");
+            }
+            function demoInternalConfirm(){
+                if(confirm("are you sure?")){
+                    alert("y");
+                }
+                else{
+                    alert("N");
+                }
+            }
+            function demoInternalPrompt(){
+                var fName=prompt("enter your frist name here....");
+                var lName=prompt("enter your last name here..");
+                alert(fName+ " " +lName);
+            }
+            function demoExternalAlert(){
+                alert("internal alret.");
+            }
+            function demoExternalConfirm(){
+                if(confirm("are you sure?")){
+                    alert("y");
+                }
+                else{
+                    alert("N");
+                }
+            }
+            function demoExternalPrompt(){
+                var fName=prompt("enter your frist name here....");
+                var lName=prompt("enter your last name here..");
+                alert(fName+ " " +lName);
+            }
+            function bodyBGGreen(){
+                document.body.style.backgroundColor="Green";
+            }
+            function divBGGray(){
+                document.getElementById("D1").style.backgroundColor="Gray";
+            }
+            function bodyBGDynamic(){
+                document.body.style.backgroundColor=prompt("enter color here..");
+            }
+            function divBGDynamic(){
+                document.getElementById("D1").style.backgroundColor=prompt("enter color here..")
+            }
+            function bodyBGCP1(){
+				document.body.style.backgroundColor=document.getElementById("CP1").value;
+			}
+			function divBGCP2(){
+				document.getElementById("D1").style.backgroundColor=document.getElementById("CP2").value;
+			}
+		</script>
+		<script src="scripts/demo.js" type="text/javascript"></script>
+		<style type="text/css">
+			body{background-color: rgb(180, 224, 17);}
+			div{background-color: rgb(6, 234, 250);height: 300px;width: 300px;}
+
+        </style>
+    </head>
+    <body>
+        
+        <div id="D1">
+        <img src="C:\Users\student\Downloads\JS2.jPG" height="300px" width="300px">
+        
+        
+            Hello Friends
+        </div>
+        <hr/>
+        <input type="button" value="Alert Inline" onclick="alert('hello guys')" />&nbsp;&nbsp;
+        <input type="button" value="Confirm Inline" onclick="confirm('are you sure?')" /> &nbsp;&nbsp;
+        <input type="button" value="Prompt Inline" onclick="prompt('Enter Firstname here...')" /> &nbsp;&nbsp;
+        <hr/>
+        <input type="button" value="Alert Internal" onclick="demoInternalAlert()" />&nbsp;&nbsp;
+        <input type="button" value="Confirm Internal" onclick="demoInternalConfirm()" /> &nbsp;&nbsp;
+        <input type="button" value="Prompt Internal" onclick="demoInternalPrompt()" /> &nbsp;&nbsp;
+        <hr/>
+        <input type="button" value="Alert External" onclick="demoExternalAlert()" />&nbsp;&nbsp;
+        <input type="button" value="Confirm External" onclick="demoExternalConfirm()" /> &nbsp;&nbsp;
+        <input type="button" value="Prompt External" onclick="demoExternalPrompt()" /> &nbsp;&nbsp;
+        <hr/>
+        <input type="button" value="Body Bg Green" onclick="bodyBGGreen()" />&nbsp;&nbsp;
+        <input type="button" value="Body Bg Gray" onclick="divBGGray()" /> &nbsp;&nbsp;
+        
+        <hr/>
+        <input type="button" value="Body Bg Prompt" onclick="bodyBGDynamic()" />&nbsp;&nbsp;
+        <input type="button" value="Body Bg Prompt" onclick="divBGDynamic()" /> &nbsp;&nbsp;
+        
+        <hr/>
+        <input type="color" id="CP1" onclick="bodyBGCP1()" />&nbsp;&nbsp;
+        <input type="color" id="CP2" onclick="divBGCP2()" /> &nbsp;&nbsp;
+    </body>
+</html>
